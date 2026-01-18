@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package axon;
+
+option go_package = "axon-agent/proto";
+
+// The Central Nervous System Protocol
+// Defines how the Brain (Python), Muscle (Go), and Senses (C++) talk to the Hub (Rust).
+
+// 1. THE HEARTBEAT (Solves the Orphan Process Bug)
+service LifeSupport {
+  // Hub sends this every 500ms. If Agent doesn't receive it, it must self-terminate.
+  rpc Heartbeat (Pulse) returns (PulseAck);
+}
+
+message Pulse {
+  int64 timestamp = 1;
+  string status = 2; // "ALIVE"
+}
+
+message PulseAck {
+  bool alive = 1;
+}
+
+// 2. THE MUSCLE (Go Agent) - Skeleton for Phase 1
+service SystemControl {
+  rpc GetStats (Empty) returns (SystemStats);
+}
+
+message Empty {}
+
+message SystemStats {
+  float cpu_usage = 1;
+  float ram_usage = 2;
+  float uptime = 3;
+}

@@ -1,0 +1,49 @@
+# Rust
+target/
+debug/
+release/
+**/*.rs.bk
+*.rlib
+*.prof*
+.idea/
+*.log
+.env*
+
+# Go
+*.exe
+*.test
+vendor/
+*.out
+
+# Node.js
+node_modules/
+dist/
+build/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+
+# Local Project Specs & Logs (Do not push)
+.specify/
+specs/
+Conversition_1.md
+Conversition_2.md
+info.md
+PRD.md
+Master_PRD.md
+Master_Design_Document.md
+Technical_Analysis_and_Architecture_Expansion.md
+protoc.zip
+protoc/
