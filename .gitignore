@@ -38,6 +38,7 @@ Thumbs.db
 # Local Project Specs & Logs (Do not push)
 .specify/
 specs/
+.opencode/
 Conversition_1.md
 Conversition_2.md
 info.md
